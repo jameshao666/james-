@@ -1400,6 +1400,7 @@ textarea:focus {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .input1{
   margin-left: 50px;
   margin-bottom: 50px;
@@ -1775,7 +1776,7 @@ textarea:focus {
   padding-bottom: 100px;
 }
 .best-receipe-area{
-  margin-top: 150px;
+  margin-top: 80px;
 }
 .form-control {
   border: none;
@@ -1788,7 +1789,7 @@ textarea:focus {
   .search_bc{
     background:rgba(0,0,0,0.6);
     padding: 100px;
-    border-left: 3px solid #1c8314;
+    border-left: 3px solid #40ba37;
   }
   .latest-blog{
     width:60%;
@@ -1804,13 +1805,15 @@ textarea:focus {
     height: 47px;
     
     border: none;
-   background-color:  #1c8314;
+   background-color:  #40ba37;
     border-radius: 0;
     padding: 0 30px;
     font-size: 20px;
     line-height: 45px;
     font-weight: 600;
     margin-bottom: 15px;
+    border-left: 3px solid #1c8314;
+   
   }
   .member_btn{
     display: inline-block;
@@ -1827,10 +1830,11 @@ textarea:focus {
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
     text-transform: capitalize;
-    
+   
   }
+
   .member_btn.active, .member_btn:hover, .member_btn:focus {
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 600;
     color: #ff0000;
     background-color: #ffffff;
@@ -1838,7 +1842,7 @@ textarea:focus {
   .member_data2{
     color: red;
     font-size: 20px;
-    
+    text-align: right;
   }
 .member_data1{
   font-size: 20px;
@@ -1960,18 +1964,23 @@ margin: auto;
   transition: .5s ease;
   border: 0px;
   position: relative;
-  color: rgba(184, 184, 184, 0.767);
+
 }
-.icon_heart:focus{
+.heart1{
+  color: #b6b6b6;
+}
+.heart2{
   color: red;
 }
+
 .carousel_pic{
-  height: 497px;
+  height: 480px;
 	position: relative;
 	overflow: hidden;
  
   margin: auto;
-  
+  transform: translateX(-30%);
+  -webkit-transform: translateX(-15%);
 }
 .product_detail {
 
@@ -1983,4 +1992,74 @@ border-spacing:40px 35px;
 }
 .product_detail td{
   width: 350px;
+}
+.span_font{
+  font-size: 30px;
+}
+.cpllaps_chef{
+  margin-top: 80px;
+}
+.comment{
+  display: inline-block;
+  text-align: left;
+  height: 47px;
+  
+  border: none;
+ background-color:  #ffffff;
+  border-radius: 0;
+  padding: 0 30px;
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  border-left: 3px solid #1c8314;
+ 
+}
+#rate{
+  font-size: 14px;
+  color: #fbb710;
+  display: inline-block;
+  padding: 0 1px; 
+  text-align: start;
+}
+.tbrecord{
+  margin-top: 50px;
+  background-color: #ebeaea;
+  height: 125px;
+  width: 100%;
+  padding: 25px 35px;
+  border-collapse:separate;
+  align-self: center;
+
+}
+.tbrecord_tb{
+ 
+  font-size: 20px ;
+  font-weight: 600;
+  width: 50%;
+  text-align: left;
+}
+.comment_text{
+  color: rgba(50, 87, 252, 0.671);
+}
+.span_left{
+  color:rgb(158, 157, 157);
+}
+.nav_bread{
+  background-color: white;
+  text-align: left;
+  width: 80%;
+}
+.product_detail img{
+  width:200px;
+  height:200px;
+  overflow: hidden;
+}
+.product_detail{
+  font-size: 15px ;
+  font-weight: 400;
+  width: 100%;
+  margin: auto;
+  height: 200px;
+  background-color: #b6b6b6;
 }

@@ -9,14 +9,39 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Delicious - Food Blog Template | Home</title>
+    <title>搜尋結果</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <script>
+       
+          
+        
 
+
+        var allinputvalue = "";
+                $('.overlay').click(function () {
+                    var inputvalue = "1" + this.id;
+
+                    if ($(this).toggleClass('heart2')) {
+                        $(this).attr('class', 'heart1');
+                        allinputvalue = allinputvalue.replace(`${inputvalue}`, "");                        
+                        $('#savetime').val(allinputvalue);
+                        
+                    }
+                    else {
+                        $(this).attr('class', 'heart2');
+                        allinputvalue += inputvalue + ",";                        
+                        $('#savetime').val(allinputvalue);
+                        
+                    }
+
+                });
+
+    </script>
 </head>
 
 <body>
@@ -292,7 +317,9 @@
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r1.jpg" alt="">
-                       
+                        <div class="overlay">
+                            <i class="fa fa-heart fa-2x" onclick="change(this)" id="heart1" ></i>                          
+                        </div>
                         <div class="receipe-content">
                             <table>
                                 <tr>
@@ -319,25 +346,8 @@
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r2.jpg" alt="">
-                        <div class="overlay">
-                            <button href="#" class="icon_heart" id="heart" onclick = "myFunction()">
-
-                            <i class="fa fa-heart" onclick="heartfun(this)" ></i></button>
-                        <script>
-                         jQuery('heart').click(function(){
-   jQuery(this).toggleClass('active');
-});
-
-function myFunction () {
-    let even = 'grid';
-    let odd = 'none';
-    let elements = document.getElementsByClassName("heart")
-
-    Array.prototype.forEach.call(elements, function(element) {
-        element.style.display === even ? element.style.display = odd : element.style.display = even
-    });
-}
-                        </script>
+                        <div class="overlay">                           
+                            <i class="fa fa-heart fa-2x" onclick="change(this)"  id="heart2" ></i>                          
                         </div>
                         <div class="receipe-content">
                             <table>
@@ -366,6 +376,9 @@ function myFunction () {
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r3.jpg" alt="">
+                        <div class="overlay">
+                            <i class="fa fa-heart fa-2x" onclick="change(this)" id="heart3"  ></i>                          
+                        </div>
                         <div class="receipe-content">
                             <table>
                                 <tr>
@@ -393,6 +406,9 @@ function myFunction () {
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r4.jpg" alt="">
+                        <div class="overlay">
+                            <i class="fa fa-heart fa-2x" onclick="change(this)"  id="heart4" ></i>                          
+                        </div>
                         <div class="receipe-content">
                             <table>
                                 <tr>
@@ -420,6 +436,9 @@ function myFunction () {
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r5.jpg" alt="">
+                        <div class="overlay">
+                            <i class="fa fa-heart fa-2x" onclick="change(this)" id="heart5"  ></i>                          
+                        </div>
                         <div class="receipe-content">
                             <table>
                                 <tr>
@@ -447,6 +466,9 @@ function myFunction () {
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r6.jpg" alt="">
+                        <div class="overlay">
+                            <i class="fa fa-heart fa-2x" onclick="change(this)"  id="heart6" ></i>                          
+                        </div>
                         <div class="receipe-content">
                             <table>
                                 <tr>
@@ -474,7 +496,9 @@ function myFunction () {
     </section>
     <!-- ##### Best Receipe Area End ##### -->
 
-    
+    <div>
+        <input type="text" name="searchstring" class="form-control" id="savetime">
+    </div>
 
 
 

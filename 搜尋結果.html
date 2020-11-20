@@ -17,29 +17,31 @@
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <script>
-       
-          
-        
+      // var allinputvalue = "";
+      var heartclicked=false;         
+      
+      $('.overlay i').click(function () {
+                   // var inputvalue = year + "年" + (month + 1) + "月" + this.id;
 
-
-        var allinputvalue = "";
-                $('.overlay').click(function () {
-                    var inputvalue = "1" + this.id;
-
-                    if ($(this).toggleClass('heart2')) {
-                        $(this).attr('class', 'heart1');
-                        allinputvalue = allinputvalue.replace(`${inputvalue}`, "");                        
-                        $('#savetime').val(allinputvalue);
-                        
+                    if ($(this).hasClass('fa-he')) {
+                        $(this).attr('class', 'heart2');
+                      //  allinputvalue = allinputvalue.replace(${inputvalue}, "");                        
+                      //  $('#savetime').val(allinputvalue);
+                   
                     }
                     else {
-                        $(this).attr('class', 'heart2');
-                        allinputvalue += inputvalue + ",";                        
-                        $('#savetime').val(allinputvalue);
+                        $(this).attr('class', 'fa-he');
+                       // allinputvalue += inputvalue + ",";                        
+                        //$('#savetime').val(allinputvalue);
                         
                     }
 
                 });
+     
+
+        
+
+
 
     </script>
 </head>
@@ -82,17 +84,17 @@
                                 <ul>
                                     <li><a href="#">Hello World!</a></li>
                                     <li><a href="#">Welcome to Colorlib Family.</a></li>
-                                    <li><a href="#">Hello Delicious!</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                                                <li><a href="#">Hello Delicious!</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <!-- Top Social Info -->
-                    <div class="col-12 col-sm-6">
-                        <div class="top-social-info text-right">
-                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <!-- Top Social Info -->
+                                <div class="col-12 col-sm-6">
+                                    <div class="top-social-info text-right">
+                                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
@@ -216,8 +218,6 @@
         </div>
     </header>
     <!-- ##### Header Area End ##### -->
-
-
     <!-- ##### Breadcumb Area Start ##### -->
     <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
         <div class="container h-100">
@@ -318,7 +318,7 @@
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r1.jpg" alt="">
                         <div class="overlay">
-                            <i class="fa fa-heart fa-2x" onclick="change(this)" id="heart1" ></i>                          
+                            <i class="fa fa-heart fa-2x fa-he"  id="heart1" ></i>                          
                         </div>
                         <div class="receipe-content">
                             <table>
@@ -347,7 +347,7 @@
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r2.jpg" alt="">
                         <div class="overlay">                           
-                            <i class="fa fa-heart fa-2x" onclick="change(this)"  id="heart2" ></i>                          
+                            <i class="fa fa-heart fa-2x fa-he"   id="heart2" ></i>                          
                         </div>
                         <div class="receipe-content">
                             <table>
@@ -377,7 +377,7 @@
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r3.jpg" alt="">
                         <div class="overlay">
-                            <i class="fa fa-heart fa-2x" onclick="change(this)" id="heart3"  ></i>                          
+                            <i class="fa fa-heart fa-2x fa-he" id="heart3"  ></i>                          
                         </div>
                         <div class="receipe-content">
                             <table>

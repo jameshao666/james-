@@ -9,6 +9,40 @@
     <title>搜尋結果</title>
     <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+.page-l {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: 2px;
+  line-height: 1.25;
+  color: #ffa943;
+  background-color: #fff;
+  
+}
+
+.page-l:hover {
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+  background-color: #ffa943;
+  border-radius: 50%;
+  
+}
+
+.page-l:focus  {
+  z-index: 3;
+  outline: 0;
+  background-color:#ffa943 ;
+  color: #fff;
+  border-radius: 50%;
+}
+
+
+
+    </style>
 </head>
 
 <body>
@@ -379,14 +413,14 @@
         <h5><span class="waitstatus">成功取消我的最愛</span></h5>
     </div>
     <nav>
-        <ul class="pagination mt-5 justify-content-center">
-            <li class="page-item"><a href="p2.html" class="page-link">上一頁</a></li>   <!--假設在第三頁-->
-            <li class="page-item"><a href="p1.html" class="page-link">1</a></li>
-            <li class="page-item"><a href="p2.html" class="page-link">2</a></li>
-            <li class="page-item"><a href="p3.html" class="page-link">3</a></li>
-            <li class="page-item"><a href="p4.html" class="page-link">4</a></li>
-            <li class="page-item"><a href="p5.html" class="page-link">5</a></li>
-            <li class="page-item"><a href="p4.html" class="page-link">下一頁</a></li>
+        <ul class="pagination mt-5 justify-content-center" >
+            <li class="page_i"><a href="#" class="page-l"><i class="fa fa-angle-left" style="font-size: 18px; font-weight: 600;"></i></a></li> 
+            <li class="page_i"><a href="#" class="page-l">1</a></li>
+            <li class="page_i"><a href="#" class="page-l">2</a></li>
+            <li class="page_i"><a href="#" class="page-l">3</a></li>
+            <li class="page_i"><a href="#" class="page-l">4</a></li>
+            <li class="page_i"><a href="#" class="page-l">5</a></li>
+            <li class="page_i"><a href="#" class="page-l"><i class="fa fa-angle-right" style="font-size: 18px; font-weight: 600;"></i></a></li>
     
         </ul>
     </nav>

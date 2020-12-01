@@ -424,7 +424,49 @@
     
         </ul>
     </nav>
+<script>
+      var pageList = [];
+  for(var i =1; i <= 272 ; i++){
+    pageList.push(i);
+  }
+  
+  $(function (){
+       LoadPage()
+  });
+  var pageSize=Math.ceil(pageList.length/5);
+  var nowItems=3;
+  var total= pagedList.length;
+  var limit=5;
+  var offset=0;
+  var nowNumber=1;
+  var nowKeepPageList=[];
+  function LoadPage(){
+    // console.log(total);
+    //console.log(pageSize);
+    if(pageSize > 1){
+      var html ='';
+      $('.pagination').append('<li><a onclick="Previous()">«</a></li>');
+      $('.pagination').append('<li class="firstpageitem active"><a onclick="FirstPage('+ 1 +')" value="1">'+ 1 +'</a></li>');
+      $('.pagination').append('<li class="firstitem hide"><a>...</a></li>');
+      for(var i = 2; i < pageSize ; i++){
+        //console.log(i);
+          if(i < nowItems){
+            html = html + '<li><a class="pageitem" onclick="NowNumberPage('+ nowNumber +')" value="'+nowNumber+'">'+ nowNumber +'</a></li>';
+            nowNumber++;
+            offset++;
+            nowKeepPageList.push(nowNumber);
+          }
+      }
+      $('.pagination').append(html);
+      $('.pagination').append('<li class="lastitem"><a >...</a></li>');
+      $('.pagination').append('<li class="lastpageitem"><a  onclick="LastPage('+ pageSize +')" value="'+pageSize+'">'+ pageSize +'</a></li>');
+      $('.pagination').append('<li><a onclick="Next()">»</a></li>');
+    }   
+  }
 
+
+
+</script>
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area bg-light">
         <div class="container h-100">
